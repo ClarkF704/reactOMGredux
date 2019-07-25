@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createPost } from '../actions/postActions';
+import logo from '../logo.svg';
+import '../App.css';
 
 
 class PostForm extends Component {
@@ -48,30 +50,47 @@ class PostForm extends Component {
         
         return (
             <div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
                         <form onSubmit={this.onSubmit}>
-                            <div>
-                                <h1>Add Todo to the JSON API</h1>
-                                <label>Title: </label><br />
+                            
+                                <div className="headerO">
+                                   <div className="container">
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                           <p className="heads">React Redux Todo</p>
+                                        </div>
+                                        <div className="col-lg-6">
+                                           <img src={logo} alt="logo" className="App-logo"/> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                </div>
+                                <div id="nd">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                            <h3 class="headInt">Add</h3>
+                                        </div>
+                                        <div className="col-lg-6">
+                                             <label className="headInt">Title: </label><br />
                                 <input type="text" name="title" onChange={this.onChange} value={this.state.title}/>
-                            </div>
                             <br/>
                             <div>
-                                <label>Body: </label><br />
+                                <label className="headInt">Body: </label><br />
                                 <textarea name="body" onChange={this.onChange} value={this.state.body} />
                             </div>
                             <br/>
-                            <button type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                        <button type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                               
                         </form>
-                        <h1>Add Post</h1>
-                        </div>
-                    </div>
-                </div>
-               
-                
-                
+                        
             </div>
         )
     }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/postActions';
+import './post.css';
 
 
 class Posts extends Component {
@@ -23,10 +24,10 @@ class Posts extends Component {
         ))
         return (
             <div>
-                <h1>Posts</h1>
+                <h1 className="headInt">Posts</h1>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12" id="postItem">
                         { postItems }
                         </div>
                     </div>
